@@ -11,8 +11,17 @@
 
 <body>
     <h1>Login Page</h1>
-    <a href="{{url_for('register')}}">Don't have an account? Sign Up</a>
+    
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <p>{{ form.username }}</p>
+        <p>{{ form.password }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
 
+    <a href="{{url_for('register')}}">Don't have an account? Sign Up</a>
+    
 </body>
+
 </html>
 
